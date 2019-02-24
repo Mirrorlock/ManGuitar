@@ -1,0 +1,48 @@
+body{
+    background-color: black;
+    background-image: url("wooden-texture.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-size: 30px;
+    font-family: "FlameOn";
+}
+
+@font-face {
+    font-family: "FlameOn";
+    src: url(resources/flame_on/Flame\ on!.ttf);
+}
+
+div#page{
+    color: white;
+    margin: auto;
+    margin-top: 0px;
+    width: 80%;
+    height: 5000px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+/* unvisited link */
+a:link {
+    color: green;
+    text-decoration: none;
+    font-size: 0px;    
+}
+a:visited {
+    color: green;
+}
+
+/* mouse over link */
+a:hover {
+    color: lightgreen;
+}
+
+div.nav{
+    text-align: right;
+    border-bottom: 3px dotted green;
+    padding: 10px;
+}
+div.nav span{
+    margin: 20px;;
+}

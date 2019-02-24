@@ -1,6 +1,6 @@
 body{
     background-color: black;
-    background-image: url("wooden-texture.jpg");
+    background-image: url("../resources/images/acoustic_guitar_cover.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -14,35 +14,61 @@ body{
 }
 
 div#page{
-    color: white;
+    color: orange;
     margin: auto;
     margin-top: 0px;
-    width: 80%;
+    width: 90%;
     height: 5000px;
     background-color: rgba(0, 0, 0, 0.6);
 }
 
+h1{
+    font-size: 80px;
+}
 
 /* unvisited link */
 a:link {
     color: red;
     text-decoration: none;
-    font-size: 40px;    
+    font-size: 30px;    
 }
 a:visited {
-    color: green;
+    color: red;
 }
 
 /* mouse over link */
 a:hover {
-    color: lightgreen;
+    color: orange;
+    /* background-color: rgb(184, 138, 120); */
 }
 
-div.nav{
-    text-align: right;
-    border-bottom: 3px dotted green;
-    padding: 10px;
+.navigation{
+    border-bottom: 3px dotted rgb(255, 0,0 );
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px 0 30px;
+    display: flex;
 }
-div.nav span{
-    margin: 20px;;
+
+ul{
+    list-style-type: none;
+    /* display: flex; */
+}
+
+li.nav_link{
+    margin-right: 25px;
+}
+
+span.LOGO a{
+    font-size: 40px;
+}
+
+ul#nav_links{
+    display: flex;  
+}
+
+
+div.home{
+    text-align: center;
 }
