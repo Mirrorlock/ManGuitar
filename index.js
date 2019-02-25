@@ -13,6 +13,10 @@ app.set("view engine", "ejs");
 
 //ROUTES
 app.use('/', require('./routes/welcome'));
+app.use('/catalog', require('./routes/catalog'));
+app.use('/about-us', require('./routes/about_us'));
+app.use('/your-cart', require('./routes/your_cart'));
+app.use('/contacts', require('./routes/contacts'));
 
 
 
