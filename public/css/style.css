@@ -4,73 +4,85 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    font-size: 30px;
-    font-family: "FlameOn";
+    font-size: 20px;
+    /* font-family: "FlameOn"; */
     color: red; 
 }
 
 @font-face {
     font-family: "FlameOn";
-    src: url(../resources/flame_on/Flame\ on!.ttf);
+    src: url(../resources/play_with_fire/Play\ With\ Fire.ttf);
 }
+
 
 textarea:focus, input:focus{
     outline: none;
 }
 
+/* li{
+    margin: 0;
+} */
+
 input{
-    font-family: "FlameOn";
-    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 35px;
+    padding: 10px;
     text-align: center;
     caret-color: red;
     color: red;
     border: none;
     background-color: transparent;
-    text-transform: uppercase;
-    /* border-radius: 25px; */
-    /* font-style: Bold; */
+    text-transform: capitalize;
 }
 
 div#page{
     color: red;
     margin: auto;
-    margin-top: 0px;
+    margin-bottom: 100px;
     width: 90%;
-    margin-bottom: 50px;
-    height: 1000px;
+    height: 100%;
 }
 i.fas{
     padding: 5px 5px 0 0;
     color: inherit;
 }
+
 h1{
-    font-size: 100px;
-    color: orange;
+    font-size: 150px;
+    color: rgb(255, 102, 0);
+}
+
+h2{
+    font-size: 120px;
+    color: rgb(255, 102, 0);
 }
 
 /* unvisited link */
 a:link {
-    color: red;
+    color: rgb(255, 102, 0);
     text-decoration: none;
-    font-size: 30px;    
+    font-size: 20px;    
 }
 a:visited {
-    color: red;
+    color: rgb(255, 102, 0);
 }
 
 /* mouse over link */
 a:hover {
-    color: rgb(255, 102, 0);
+    /* color: rgb(255, 102, 0); */
+    color: red;
+
     /* background-color: rgb(184, 138, 120); */
 }
 
 .navigation{
+    align-items: center;
     border-bottom: 3px dotted rgb(255, 0,0 );
     height: 100px;
-    align-items: center;
     justify-content: space-between;
     padding: 0 20px 0 30px;
     display: flex;
+    font-family: "FlameOn";
 }
 
 ul{
@@ -86,6 +98,19 @@ img#LOGO{
     vertical-align: middle;
 }
 
+/* span.LOGO{ */
+    /* vertical-align: middle;  */
+    /* padding: 20px; */
+    /* margin: 20px; */
+/* } */
+
+
+
+span.LOGO ul{
+    display: flex;
+    padding-left: 0;
+} 
+
 span.LOGO a{
     font-size: 40px;
 }
@@ -97,6 +122,10 @@ ul#nav_links{
 
 footer{
     margin-top: 40px;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    font-family: "FlameOn"
 }
 
 div.home{
@@ -132,7 +161,6 @@ div.search_block{
     margin: auto;
     position: relative;
     border-radius: 25px;
-
     /* display: flex; */
 }
 
@@ -149,4 +177,110 @@ ul.footer-bar li{
 div.footer-div{
     padding: 15px;
     display:flex;
+}
+
+div.collection{
+    width: 30%;
+    background: rgba(112, 111, 111, 0.589);
+    margin: 20px;
+    /* height: 100; */
+}
+
+div.collection img{
+    width: 200px;
+}
+
+div.collection-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    width: 100%;
+    margin-top: 3%;
+    /* white-space: normal; */
+}
+
+a{
+    display: contents;
+}
+
+
+div.view{
+    width: 50%;
+    min-height: 100vh;    
+}
+
+div.view img{
+    min-height: 50vh;
+    max-height: 100vh;
+}
+.guitar-content{
+    border: 2px  solid orange;
+    background-color: rgba(105, 97, 97, 0.541);
+    border-radius: 25px;
+    width: 50%;
+    font-size: 20px;
+    padding: 20px;
+    align-content: center;
+    /* align-items: flex-start; */
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(255,0,0,0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(255,0,0,0.4); 
+}
+
+strong.guitar-stats{
+    color: orange;
+    font-size: 30px;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    width: 60%;
+    justify-content: space-between;
+    min-height: 60px;
+}
+strong.stat-values{
+    font-size: 50px;
+}
+
+div#main-content{
+    margin-top: 3%;
+}
+
+button{
+    background: transparent;
+    border: none;
+    color: inherit;
+    padding: 9px;
+    padding-bottom: 20px;
+    border-radius: 25px;
+    /* height: inherit; */
+    /* width: inherit; */
+    /* size: inherit; */
+}
+button:hover{
+    background: rgb(255, 0,0, 0.2);
+}
+
+button:focus{
+    outline: none;
 }
