@@ -3,7 +3,7 @@ const expressLayouts = require('express-ejs-layouts');
 const app = express();
 const PORT = process.env.PORT || '3000';
 const body_parser = require("body-parser");
-// const db = require("./config/database");
+const db = require("./config/database");
 
 
 //css
