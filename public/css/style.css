@@ -15,6 +15,12 @@ body{
 }
 
 
+.center-flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 textarea:focus, input:focus{
     outline: none;
 }
@@ -43,7 +49,7 @@ div#page{
     height: 100%;
 }
 i.fas{
-    padding: 5px 5px 0 0;
+    padding-right: 5px;
     color: inherit;
 }
 
@@ -78,7 +84,6 @@ a:hover {
 .navigation{
     align-items: center;
     border-bottom: 3px dotted rgb(255, 0,0 );
-    height: 100px;
     justify-content: space-between;
     padding: 0 20px 0 30px;
     display: flex;
@@ -95,6 +100,7 @@ li.nav_link{
 
 img#LOGO{
     width: 50px;
+    height: auto;
     vertical-align: middle;
 }
 
@@ -110,6 +116,11 @@ span.LOGO ul{
     display: flex;
     padding-left: 0;
 } 
+
+span.LOGO ul li{
+    display: flex;
+    align-items: center;
+}
 
 span.LOGO a{
     font-size: 40px;
@@ -180,7 +191,7 @@ div.footer-div{
 }
 
 div.collection{
-    width: 30%;
+    width: 450px;
     background: rgba(112, 111, 111, 0.589);
     margin: 20px;
     /* height: 100; */
