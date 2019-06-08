@@ -1,3 +1,5 @@
+<script src="/javascript/catalog.js"></script> 
+
 <div class="back-color-white search_block" style="margin-top: 15px;">
     <form action="/catalog" method="post" class = "block">
         <input type="text" name="search" class="search_box" placeholder="Find Me A Guitar" style="width: 100%;" value>
@@ -8,13 +10,14 @@
         
     </form>  
 </div>
+
 <%if(guitars.length==0){%>
     <div style="text-align: center;">
         <h2>There is nothing to be found...</h2>
     </div>
 <%}%>   
 
-<div class = "collection-wrapper">
+<div class = "collection-wrapper" id = "guitars-wrapper">
     <% for(var i = 0; i < guitars.length; i++){ %>
         <%var guitar = guitars[i];%>
         <a href= <%-"/catalog/" + guitar.id%> >
@@ -24,7 +27,7 @@
                         <img src=<%- guitar.image %>></td>
                     </li>
                     <li>
-                        <p> Name: <strong class="guitar-stats"> <%- guitar.guitarName %> </strong> </p>
+                        <p class="guitar-name"> Name: <strong class="guitar-stats"> <%- guitar.guitarName %> </strong> </p>
                     </li>
                     <li>
                         <p> Price: <strong class="guitar-stats"> <%- guitar.price %> </strong> </p>

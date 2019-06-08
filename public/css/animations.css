@@ -1,0 +1,10 @@
+
+@keyframes navbar-align{
+    from {margin-right: 0;}
+    to   {margin-right: 25px;}
+}
+
+@keyframes fadein{
+    from {opacity: 0;}
+    to   {opacity: 1;}
+}

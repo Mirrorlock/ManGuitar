@@ -9,6 +9,7 @@ body{
     color: red; 
 }
 
+
 @font-face {
     font-family: "FlameOn";
     src: url(../resources/play_with_fire/Play\ With\ Fire.ttf);
@@ -64,21 +65,18 @@ h2{
 }
 
 /* unvisited link */
-a:link {
+a {
     color: rgb(255, 102, 0);
+    font-size: 20px;
     text-decoration: none;
-    font-size: 20px;    
 }
+
 a:visited {
     color: rgb(255, 102, 0);
 }
 
-/* mouse over link */
 a:hover {
-    /* color: rgb(255, 102, 0); */
-    color: red;
-
-    /* background-color: rgb(184, 138, 120); */
+    color: rgb(255, 102, 0);
 }
 
 .navigation{
@@ -94,22 +92,33 @@ ul{
     list-style-type: none;
 }
 
-li.nav_link{
-    margin-right: 25px;
+.fire-color{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: #a40606;
+    padding-right: 10px;
+    background-image: linear-gradient(315deg, rgb(255, 102, 0) 0%, #d92424 74%);
 }
+
+li.nav_link{
+    /* background-color: #ff4e00; */
+    /* background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%); */
+    
+    animation: navbar-align 1.5s ease-out;
+    animation-fill-mode: forwards;
+}
+
+#welcome-button{
+    font-size: 120%;
+    padding: 0 !important;
+}
+
 
 img#LOGO{
     width: 50px;
     height: auto;
     vertical-align: middle;
 }
-
-/* span.LOGO{ */
-    /* vertical-align: middle;  */
-    /* padding: 20px; */
-    /* margin: 20px; */
-/* } */
-
 
 
 span.LOGO ul{
@@ -136,7 +145,7 @@ footer{
     position: relative;
     bottom: 0;
     left: 0;
-    font-family: "FlameOn"
+    font-family: "FlameOn";
 }
 
 div.home{
@@ -171,8 +180,19 @@ div.search_block{
     vertical-align: middle;
     margin: auto;
     position: relative;
-    border-radius: 25px;
+    border-radius: 25px;    
+    padding: 0;
+    -webkit-animation: fadein 1.2s; /* Safari, Chrome and Opera > 11.2.1 */
+    -moz-animation: fadein 1.2s; /* Firefox < 16 */
+    -ms-animation: fadein 1.2s; /* Internet Explorer */
+    -o-animation: fadein 1.2s; /* Opera < 11.2.1 */
+    animation: fadein 1.2s;
     /* display: flex; */
+}
+
+div.search-block:focus{
+    border: 1px solid red;
+
 }
 
 ul.footer-bar{
@@ -198,13 +218,14 @@ div.collection{
 }
 
 div.collection img{
-    width: 200px;
+    width: 150px;
+    /* margin: 20px auto; */
 }
 
 div.collection-wrapper{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; 
+    justify-content: space-evenly;
     width: 100%;
     margin-top: 3%;
     /* white-space: normal; */
@@ -221,18 +242,31 @@ div.view{
 }
 
 div.view img{
-    min-height: 50vh;
-    max-height: 100vh;
+    max-height: 100%;
+    width: 99%;
+    border-radius: 25px;
 }
+
+#guitars-wrapper{
+    -webkit-animation: fadein 1.2s; /* Safari, Chrome and Opera > 11.2.1 */
+  -moz-animation: fadein 1.2s; /* Firefox < 16 */
+  -ms-animation: fadein 1.2s; /* Internet Explorer */
+  -o-animation: fadein 1.2s; /* Opera < 11.2.1 */
+  animation: fadein 1.2s;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
 .guitar-content{
     border: 2px  solid orange;
-    background-color: rgba(105, 97, 97, 0.541);
+    background-color: rgba(83, 79, 79, 0.794);
     border-radius: 25px;
     width: 50%;
     font-size: 20px;
     padding: 20px;
+    overflow: auto;
     align-content: center;
-    /* align-items: flex-start; */
 }
 
 ::-webkit-scrollbar {
@@ -259,18 +293,18 @@ div.view img{
 
 strong.guitar-stats{
     color: orange;
-    font-size: 30px;
+    font-size: 20px;
 }
 
 .content{
     display: flex;
     align-items: center;
-    width: 60%;
+    width: 97%;
     justify-content: space-between;
     min-height: 60px;
 }
 strong.stat-values{
-    font-size: 50px;
+    font-size: 30px;
 }
 
 div#main-content{
@@ -284,14 +318,60 @@ button{
     padding: 9px;
     padding-bottom: 20px;
     border-radius: 25px;
-    /* height: inherit; */
-    /* width: inherit; */
-    /* size: inherit; */
-}
-button:hover{
-    background: rgb(255, 0,0, 0.2);
 }
 
 button:focus{
+    outline: none;
+}
+
+
+.guitar-name{
+    max-height: 30px;
+    transition: all 0.5s ease-out ;
+    overflow: hidden;
+}
+
+.guitar-name:hover{
+    max-height: 100px;
+}
+
+.tag{
+    width: 110px;
+    margin-right: 10px;
+}
+
+#add-to-cart-button{
+    margin-top: 100px;
+}
+
+.sexy-button{
+    color: white;
+    font-size: 0.9em;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: "FlameOn";
+    width: 200px;
+    padding: 20px;
+    background-image: linear-gradient(230deg, rgb(255, 102, 0), #ff4800 ,rgb(255, 217, 0), #ff4800, #d92424 );
+    box-shadow: 0 4px 15px 0 rgba(255, 102, 0, 0.75);
+    background-size: 300% 100%;
+    border-radius: 50px;
+    border:none; 
+
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+
+}
+.sexy-button:hover{
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.sexy-button:focus{
     outline: none;
 }
