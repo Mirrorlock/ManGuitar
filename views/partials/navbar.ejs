@@ -1,3 +1,5 @@
+<script src="/javascript/navbar.js"></script> 
+
 <nav>
     <div class="navigation">
         <span class="LOGO">
@@ -5,17 +7,29 @@
                 <li style="padding-bottom: 15px;">
                     <a href="/"><img src="/resources/images/GHpickOnFire.png" alt="Logo" id = "LOGO"></a>
                 </li>
-                <li style="margin-left: 10px;" class = "fire-color">
+                <li style="margin-left: 10px;" class = "fire-color nav-large">
                     <a href="/" id="logo-a">Guitar Heaven</a>
                 </li>
             </ul>
         </span>
         <span>
-            <ul id = "nav_links" class = "fire-color">
+            <ul id = "nav_links" class = "fire-color nav-large">
                 <li class = "nav_link"><a href="/catalog"> All Guitars </a></li>
                 <li class = nav_link><a href="/your-cart"> Your Cart </a></li>
                 <li class = nav_link><a href="/contacts"> Contacts</a></li>
             </ul>
+
+            <button id= "nav-small-trigger" class="nav-small">
+                <i class="fas fa-bars  fire-color" style="font-size: 2em;"></i>
+            </button>
+            
+            <div class = "nav-small " id = "nav-small-dropdown">
+                <ul class = "fire-color">
+                    <li ><a href="/catalog"> All Guitars </a></li>
+                    <li ><a href="/your-cart"> Your Cart </a></li>
+                    <li ><a href="/contacts"> Contacts</a></li>
+                </ul>
+            </div>
         </span>
     </div>
 </nav>
